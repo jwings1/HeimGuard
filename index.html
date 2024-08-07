@@ -1,81 +1,228 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PDF Slides Presentation</title>
+    <title>HeimGuard - Weniger Unfälle im Haushalt</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f3f4f6;
+            color: #333;
         }
-        .slideshow-container {
-            max-width: 80%;
-            position: relative;
-            margin: auto;
+        header {
+            background: linear-gradient(135deg, #4CAF50 0%, #81C784 100%);
+            color: #fff;
+            padding: 40px 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-        .slide {
-            display: none;
+        nav {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
-        .active {
-            display: block;
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
         }
-        .prev, .next {
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            width: auto;
-            padding: 16px;
-            margin-top: -22px;
-            color: white;
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
             font-weight: bold;
-            font-size: 18px;
-            transition: 0.6s ease;
-            border-radius: 0 3px 3px 0;
-            user-select: none;
+            transition: color 0.3s;
         }
-        .next {
-            right: 0;
-            border-radius: 3px 0 0 3px;
+        nav ul li a:hover {
+            color: #81C784;
         }
-        .prev:hover, .next:hover {
-            background-color: rgba(0,0,0,0.8);
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        section {
+            padding: 40px 0;
+            background: #fff;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h2, h3 {
+            color: #4CAF50;
+        }
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            margin: 20px 0;
+            color: #fff;
+            background: linear-gradient(135deg, #4CAF50 0%, #81C784 100%);
+            text-decoration: none;
+            border-radius: 50px;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: linear-gradient(135deg, #81C784 0%, #4CAF50 100%);
+        }
+        .icon {
+            width: 50px;
+            height: 50px;
+            fill: #4CAF50;
+            margin-right: 20px;
+        }
+        .feature-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        form label {
+            font-weight: bold;
+        }
+        form input, form textarea {
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            transition: border 0.3s;
+        }
+        form input:focus, form textarea:focus {
+            border: 1px solid #4CAF50;
+        }
+        form input[type="submit"] {
+            background: #4CAF50;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            padding: 15px 30px;
+            border-radius: 50px;
+            transition: background 0.3s;
+        }
+        form input[type="submit"]:hover {
+            background: #388E3C;
+        }
+        .intro, .feature-item p {
+            flex: 1;
         }
     </style>
 </head>
 <body>
+    <header>
+        <div class="container">
+            <h1>HeimGuard</h1>
+            <p>Weniger Unfälle im Haushalt mit einem intelligenten Assistenten</p>
+        </div>
+    </header>
 
-<div class="slideshow-container">
-    <div class="slide active"><img src="images/slide1.png" style="width:100%"></div>
-    <div class="slide"><img src="images/slide2.png" style="width:100%"></div>
-    <div class="slide"><img src="images/slide3.png" style="width:100%"></div>
-    <!-- Add more slides as needed -->
-    
-    <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
-    <a class="next" onclick="changeSlide(1)">&#10095;</a>
-</div>
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
 
-<script>
-    let slideIndex = 0;
-    showSlides(slideIndex);
+    <section id="home">
+        <div class="container">
+            <h2>Willkommen bei HeimGuard</h2>
+            <p class="intro">Unser intelligenter Assistent hilft, Unfälle im Haushalt zu reduzieren. Erfahren Sie mehr über die häufigsten Verletzungen und wie unser System hilft, diese zu verhindern.</p>
+            <h3>Statistiken zu häufigen Verletzungen im Haushalt</h3>
+            <ul>
+                <li>Stürze</li>
+                <li>Schnittverletzungen</li>
+                <li>Verbrennungen</li>
+                <li>Tierbisse</li>
+                <li>Vergiftungen</li>
+            </ul>
+        </div>
+    </section>
 
-    function changeSlide(n) {
-        showSlides(slideIndex += n);
-    }
+    <section id="features">
+        <div class="container">
+            <h2>Wie funktioniert HeimGuard?</h2>
+            <h3>Häufige Haushaltsverletzungen und Prävention</h3>
+            <div class="feature-item">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0C5.371 0 0 5.371 0 12s5.371 12 12 12 12-5.371 12-12S18.629 0 12 0zm0 22C6.486 22 2 17.514 2 12S6.486 2 12 2s10 4.486 10 10-4.486 10-10 10zm-1-17h2v9h-2zm0 11h2v2h-2z"/></svg>
+                <p>Unser System kann Stürze erkennen und sofort Hilfe rufen, besonders gut für ältere Menschen.</p>
+            </div>
+            <div class="feature-item">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0C5.371 0 0 5.371 0 12s5.371 12 12 12 12-5.371 12-12S18.629 0 12 0zm0 22C6.486 22 2 17.514 2 12S6.486 2 12 2s10 4.486 10 10-4.486 10-10 10zm-1-17h2v9h-2zm0 11h2v2h-2z"/></svg>
+                <p>Das System kann sehen, wenn jemand zu schnell die Treppe hinuntergeht, und eine Warnung geben.</p>
+            </div>
+            <div class="feature-item">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0C5.371 0 0 5.371 0 12s5.371 12 12 12 12-5.371 12-12S18.629 0 12 0zm0 22C6.486 22 2 17.514 2 12S6.486 2 12 2s10 4.486 10 10-4.486 10-10 10zm-1-17h2v9h-2zm0 11h2v2h-2z"/></svg>
+                <p>Das System stellt sicher, dass Messer sicher verwendet und aufbewahrt werden.</p>
+            </div>
+            <div class="feature-item">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0C5.371 0 0 5.371 0 12s5.371 12 12 12 12-5.371 12-12S18.629 0 12 0zm0 22C6.486 22 2 17.514 2 12S6.486 2 12 2s10 4.486 10 10-4.486 10-10 10zm-1-17h2v9h-2zm0 11h2v2h-2z"/></svg>
+                <p>Es kann zerbrochenes Glas oder scharfe Gegenstände erkennen und warnen.</p>
+            </div>
+            <div class="feature-item">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0C5.371 0 0 5.371 0 12s5.371 12 12 12 12-5.371 12-12S18.629 0 12 0zm0 22C6.486 22 2 17.514 2 12S6.486 2 12 2s10 4.486 10 10-4.486 10-10 10zm-1-17h2v9h-2zm0 11h2v2h-2z"/></svg>
+                <p>Kameras können Küchenherde und andere heiße Oberflächen überwachen und warnen.</p>
+            </div>
+            <div class="feature-item">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0C5.371 0 0 5.371 0 12s5.371 12 12 12 12-5.371 12-12S18.629 0 12 0zm0 22C6.486 22 2 17.514 2 12S6.486 2 12 2s10 4.486 10 10-4.486 10-10 10zm-1-17h2v9h-2zm0 11h2v2h-2z"/></svg>
+                <p>Das System kann Rauch oder Flammen erkennen und vor Feuergefahr warnen.</p>
+            </div>
+            <div class="feature-item">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0C5.371 0 0 5.371 0 12s5.371 12 12 12 12-5.371 12-12S18.629 0 12 0zm0 22C6.486 22 2 17.514 2 12S6.486 2 12 2s10 4.486 10 10-4.486 10-10 10zm-1-17h2v9h-2zm0 11h2v2h-2z"/></svg>
+                <p>Das System kann überwachen, wie Menschen mit Haustieren umgehen, und sicherstellen, dass Kinder nicht in Gefahr sind.</p>
+            </div>
+            <div class="feature-item">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0C5.371 0 0 5.371 0 12s5.371 12 12 12 12-5.371 12-12S18.629 0 12 0zm0 22C6.486 22 2 17.514 2 12S6.486 2 12 2s10 4.486 10 10-4.486 10-10 10zm-1-17h2v9h-2zm0 11h2v2h-2z"/></svg>
+                <p>Es kann warnen, wenn ein Tier Anzeichen von Ärger oder Aggression zeigt.</p>
+            </div>
+            <div class="feature-item">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0C5.371 0 0 5.371 0 12s5.371 12 12 12 12-5.371 12-12S18.629 0 12 0zm0 22C6.486 22 2 17.514 2 12S6.486 2 12 2s10 4.486 10 10-4.486 10-10 10zm-1-17h2v9h-2zm0 11h2v2h-2z"/></svg>
+                <p>Das System kann sicherstellen, dass Haushaltschemikalien sicher und außer Reichweite von Kindern aufbewahrt werden.</p>
+            </div>
+            <div class="feature-item">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0C5.371 0 0 5.371 0 12s5.371 12 12 12 12-5.371 12-12S18.629 0 12 0zm0 22C6.486 22 2 17.514 2 12S6.486 2 12 2s10 4.486 10 10-4.486 10-10 10zm-1-17h2v9h-2zm0 11h2v2h-2z"/></svg>
+                <p>Es kann unsichere Kohlenmonoxidwerte erkennen und warnen.</p>
+            </div>
+        </div>
+    </section>
 
-    function showSlides(n) {
-        let slides = document.getElementsByClassName("slide");
-        if (n >= slides.length) { slideIndex = 0 }
-        if (n < 0) { slideIndex = slides.length - 1 }
-        for (let i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        slides[slideIndex].style.display = "block";
-    }
-</script>
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message"></textarea>
+                <input type="submit" value="Submit" class="btn">
+            </form>
+        </div>
+    </section>
 
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 HeimGuard. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
 </body>
 </html>
